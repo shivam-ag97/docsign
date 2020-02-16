@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<h1> Your Signed PDF has been created in D://uploads with name "signed.pdf" </h1>
+   <div class="container" align="left">
+		<!-- <a href="/return" target="blank"><button class='btn btn-default'>View Here</button></a> -->
+    <button onclick="window.location='{{url_for('return_files')}}'"> Download Here </button>
+   </div>
+
+<button onclick="window.location='{{url_for('dropsession')}}' " type="submit"> LogOut </button>
+</body>
+</html>
