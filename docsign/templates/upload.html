@@ -1,7 +1,9 @@
-<!doctype html>
-
 <title>App to sign a PDF</title>
-<h2>Select a PDF file to be signed</h2>
+<div style="float:right">
+<button onclick="window.location='{{url_for('dropsession')}}' " type="submit"> LogOut </button>
+</div>
+<h1>Welcome {{ user }} to the Document Sign WebApp</h1>
+<h2>Please upload PDF file to be signed</h2>
 <p>
 	{% with messages = get_flashed_messages() %}
 	  {% if messages %}
@@ -13,7 +15,7 @@
 	  {% endif %}
 	{% endwith %}
 </p>
-<button onclick="window.location='{{url_for('dropsession')}}' " type="submit"> LogOut </button>
+
 <form method="post" action="/upload" enctype="multipart/form-data">
     <dl>
 		<p>
@@ -21,10 +23,10 @@
 		</p>
     </dl>
     <p>
-		<input type="submit" value="Submit">
+		<input type="submit" value="Upload">
 	</p>
 </form>
 
-<form method="post" action='/download'>
-<button name="generate_pdf" onclick="submit"> Generate Signed PDF </button>
-</form>
+<!-- <form method="post" action='/download'> -->
+<!-- <button name="generate_pdf" onclick="submit"> Generate Signed PDF </button> -->
+<!-- </form> -->
