@@ -13,7 +13,7 @@
 </div>
 <h1> Please draw your signature </h1>
 <div id="sketch">
-    <canvas id="paint"></canvas>
+    <canvas id="paint" style="border: 1px solid black"></canvas>
 </div>
 <div id="settings"> Colours
     <button onclick="getColor('blue');">Blue</button>
@@ -34,7 +34,9 @@
     <button type="button" id="btnDownload"> Done </button>
     <!-- <button onclick="window.location='{{ url_for('dropsession') }}' " type="submit"> LogOut</button> -->
     <br>
-  <button onclick="window.location='{{url_for('return_files')}}'"> Download Here </button>
+    <br>
+  <button onclick="window.location='{{url_for('pos')}}'"> Specify Co-ordinated on the next page </button>
+
 </div>
 <!-- <button >  </button> -->
 
